@@ -1,67 +1,70 @@
 Algoritmo "MonitoramentoCestaBasica"
-// Autor: Fabio Santos
+// Autor: Fabio Junior Lima dos Santos
+// Disciplina: Algoritmos e Pensamento Computacional
 // Data: Setembro/2025
-// Objetivo: Analisar a variaÁ„o de preÁos de 3 produtos da cesta b·sica.
+// Objetivo: Analisar a varia√ß√£o de pre√ßos de 3 produtos da cesta b√°sica.
 
 Var
- // Vari·veis para os dados do produto
+ // Vari√°veis para os dados do produto
  nome: caractere
  preco_anterior, preco_atual: real
- // Vari·veis para c·lculos e classificaÁ„o
+
+ // Vari√°veis para c√°lculos e classifica√ß√£o
  variacao: real
  situacao: caractere
- // Vari·vel de controle para o laÁo de repetiÁ„o
+
+ // Vari√°vel de controle para o la√ßo de repeti√ß√£o
  contador: inteiro
 Inicio
  EscrevaL("===================================================")
- EscrevaL(" Ferramenta de An·lise de PreÁos da Cesta B·sica ")
+ EscrevaL(" Ferramenta de An√°lise de Pre√ßos da Cesta B√°sica ")
  EscrevaL("===================================================")
  EscrevaL("")
- // LaÁo de repetiÁ„o para ler e processar os 3 produtos
+ // La√ßo de repeti√ß√£o para ler e processar os 3 produtos
  Para contador de 1 ate 3 faca
- // --- SeÁ„o 1: Leitura dos Dados ---
+ // --- Se√ß√£o 1: Leitura dos Dados ---
  EscrevaL("-----------------------------------------")
  EscrevaL("INFORME OS DADOS DO PRODUTO ", contador, "/3")
  Escreva("Digite o nome do produto: ")
  Leia(nome)
- Escreva("Digite o preÁo no mÍs anterior (R$): ")
+ Escreva("Digite o pre√ßo no m√™s anterior (R$): ")
  Leia(preco_anterior)
- Escreva("Digite o preÁo no mÍs atual (R$): ")
+ Escreva("Digite o pre√ßo no m√™s atual (R$): ")
  Leia(preco_atual)
  EscrevaL("") // Pula uma linha para organizar
- // --- SeÁ„o 2: C·lculos e ClassificaÁ„o ---
- // Calcula a variaÁ„o percentual
- // Adicionado um teste para evitar divis„o por zero
+ // --- Se√ß√£o 2: C√°lculos e Classifica√ß√£o ---
+ // Calcula a varia√ß√£o percentual
+ // Adicionado um teste para evitar divis√£o por zero
  Se preco_anterior > 0 entao
  variacao <- ((preco_atual - preco_anterior) / preco_anterior) * 100
  Senao
- // Se o preÁo anterior for zero, n„o È possÌvel calcular a variaÁ„o
+ // Se o pre√ßo anterior for zero, n√£o √© poss√≠vel calcular a varia√ß√£o
  variacao <- 0
  FimSe
- // Classifica a situaÁ„o do produto com base na variaÁ„o
+ // Classifica a situa√ß√£o do produto com base na varia√ß√£o
  Se variacao > 0 entao
  situacao <- "AUMENTO"
  Senao
  Se variacao < 0 entao
  situacao <- "QUEDA"
  Senao
- situacao <- "EST¡VEL"
+ situacao <- "EST√ÅVEL"
  FimSe
  FimSe
- // --- SeÁ„o 3: ExibiÁ„o do Resumo Final por Produto ---
- EscrevaL("--- RESUMO DA AN¡LISE DO PRODUTO ---")
+ // --- Se√ß√£o 3: Exibi√ß√£o do Resumo Final por Produto ---
+ EscrevaL("--- RESUMO DA AN√ÅLISE DO PRODUTO ---")
  EscrevaL("Produto: ", nome)
- EscrevaL("PreÁo Anterior: R$ ", preco_anterior:5:2)
- EscrevaL("PreÁo Atual: R$ ", preco_atual:5:2)
- EscrevaL("VariaÁ„o Percentual: ", variacao:5:2, "%")
- EscrevaL("SituaÁ„o: ", situacao)
+ EscrevaL("Pre√ßo Anterior: R$ ", preco_anterior:5:2)
+ EscrevaL("Pre√ßo Atual: R$ ", preco_atual:5:2)
+ EscrevaL("Varia√ß√£o Percentual: ", variacao:5:2, "%")
+ EscrevaL("Situa√ß√£o: ", situacao)
  // Verifica se o aumento foi abusivo (superior a 10%)
  Se variacao > 10 entao
  EscrevaL("ALERTA: Aumento abusivo detectado!")
  FimSe
  FimPara
  EscrevaL("-----------------------------------------")
- EscrevaL("An·lise dos 3 produtos foi concluÌda com sucesso.")
+ EscrevaL("An√°lise dos 3 produtos foi conclu√≠da com sucesso.")
  EscrevaL("===================================================")
 FimAlgoritmo
 
