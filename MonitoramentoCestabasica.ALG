@@ -1,6 +1,5 @@
 Algoritmo "MonitoramentoCestaBasica"
-// Autor: Fabio Junior Lima dos Santos
-// Disciplina: Algoritmos e Pensamento Computacional
+// Autor: Fabio Santos
 // Data: Setembro/2025
 // Objetivo: Analisar a variação de preços de 3 produtos da cesta básica.
 
@@ -75,5 +74,6 @@ Inicio
  EscrevaL("Análise dos 3 produtos foi concluída com sucesso.")
  EscrevaL("===================================================")
 FimAlgoritmo
+
 
 
